@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login Form</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .data {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .leftside {
+            width: 50%;
+            height: 100%;
+            float: left;
+            background: linear-gradient(to bottom, #b9bcc2, #ebc9e1, #ddc2ad);
+        }
+
+        .rightside {
+            width: 50%;
+            float: right;
+            background: #ffffff;
+            height: 100%;
+            padding: 40px 20px;
+        }
+
+        .loginform {
+            margin: 10% auto; 
+            width: 100%;
+            max-width: 808px;
+        }
+
+        .loginform h2 {
+            color: #FA4616;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .loginform label {
+            display: block;
+            color: #333;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .loginform input[type="email"],
+        .loginform input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .rememberme {
+            margin-bottom: 7px;
+        }
+
+        .rememberme input {
+            margin-right: 5px;
+        }
+
+
+        .rememberme label {
+            font-weight: normal;
+        }
+
+        .loginform button {
+            width: 100%;
+            padding: 12px;
+            background-color: orangered;
+            color: #ffffff;
+            border: none;
+            
+            font-size: 18px;
+           
+        }
+
+        .loginform button:hover {
+            background-color: greenyellow;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .leftside {
+                display: none; 
+            }
+
+            .rightside {
+                width: 100%;
+                float: none;
+                padding: 50px 20px;
+            }
+
+            .loginform {
+                margin: 0 auto;
+            }
+
+            .loginform h2 {
+                font-size: 26px;
+            }
+
+            .loginform button {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="data">
+        <div class="leftside"></div>
+        <div class="rightside">
+            <form class="loginform">
+                <h2>Login Form</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                
+                <div class="rememberme">
+                    <input type="checkbox" id="remember" name="remember"> <a>Remember Me</a>
+                    
+                </div>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
